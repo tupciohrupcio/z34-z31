@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kod źródłowy - Zadanie 16</title>
+<style>
+  pre {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    overflow-x: auto;
+  }
+</style>
+</head>
+<body>
+<h1 style="text-align:center;">Kod źródłowy – Zadanie 16 - Bruliński Olek</h1>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Zadanie 16 - Bruliński Olek&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style="color:blue;font-size:50px;"&gt;
+&lt;script language="JavaScript"&gt;
+var D1_Brul = prompt("A=", "");
+var D2_Brul = prompt("B=", "");
+var a_Brul = parseFloat(D1_Brul);
+var b_Brul = parseFloat(D2_Brul);
+var c_Brul;
+var d_Brul;
+var e_Brul;
+var f_Brul;
+var o_Brul;
+
+c_Brul = a_Brul * a_Brul * a_Brul;
+d_Brul = 3 * a_Brul * a_Brul * b_Brul;
+e_Brul = 3 * a_Brul * b_Brul * b_Brul;
+f_Brul = b_Brul * b_Brul * b_Brul;
+o_Brul = c_Brul + d_Brul + e_Brul + f_Brul;
+
+document.write("(" + a_Brul + " + " + b_Brul + ")^3 = " 
++ a_Brul + "^3 + 3((" + a_Brul + ")^2)(" + b_Brul + ") + 3(" + a_Brul + ")((" + b_Brul + ")^2) + " 
++ b_Brul + "^3 = " + c_Brul + " + " + d_Brul + " + " + e_Brul + " + " + f_Brul + " = " + o_Brul);
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</body>
+</html>

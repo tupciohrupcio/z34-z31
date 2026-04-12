@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bruliński Zadanie 14 KOD</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: Consolas, monospace;
+            white-space: pre;
+            padding: 20px;
+        }
+        pre {
+            background: #2d2d2d;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+<h2>Kod zadania 14:</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Bruliński Zadanie 14&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial;
+            font-size: 24px;
+            padding: 20px;
+        }
+        h2 {
+            color: green;
+        }
+    &lt;/style&gt;
+    &lt;script&gt;
+        function rozkladEgipski() {
+            let m = 4;
+            let wynik = "Rozkład ułamka 1/" + m + " na trzy ułamki egipskie:&lt;br&gt;";
+
+            let a = 6;
+            let b = 30;
+            let c = 20;
+
+            let suma = 1/a + 1/b + 1/c;
+            let oryginal = 1/m;
+
+            wynik += `1/${m} = 1/${a} + 1/${b} + 1/${c}&lt;br&gt;`;
+            wynik += `Suma po prawej stronie = ${suma.toFixed(5)}&lt;br&gt;`;
+            wynik += `Oryginalny ułamek = ${oryginal.toFixed(5)}&lt;br&gt;`;
+
+            if (Math.abs(suma - oryginal) &lt; 0.00001) {
+                wynik += `&lt;b style="color:green;"&gt;✅ Rozkład poprawny!&lt;/b&gt;`;
+            } else {
+                wynik += `&lt;b style="color:red;"&gt;❌ Rozkład błędny!&lt;/b&gt;`;
+            }
+
+            document.getElementById("wynik").innerHTML = wynik;
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Bruliński Zadanie 14&lt;/h2&gt;
+    &lt;p&gt;Temat: Rozkład ułamka egipskiego na trzy ułamki egipskie.&lt;/p&gt;
+    &lt;button onclick="rozkladEgipski()"&gt;Pokaż rozkład dla 1/4&lt;/button&gt;
+    &lt;div id="wynik"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</body>
+</html>

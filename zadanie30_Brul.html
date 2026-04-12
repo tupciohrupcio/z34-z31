@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie – Programowanie obiektowe</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+        #wynik {
+            margin-top: 15px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 1px solid gray;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var Samochod = {
+            kolor: "czerwony",
+            marka: "BMW",
+            rok: 2020,
+
+            samochod_wyswietl_brulinski: function () {
+                document.getElementById("wynik").innerHTML =
+                    "<b>Nazwa obiektu:</b> Samochod<br><br>" +
+                    "<b>Pola (właściwości):</b><br>" +
+                    "kolor: " + this.kolor + "<br>" +
+                    "marka: " + this.marka + "<br>" +
+                    "rok: " + this.rok + "<br><br>" +
+                    "<b>Nazwa metody:</b> samochod_wyswietl_brulinski";
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+<h1>Zadanie – Programowanie obiektowe</h1>
+
+<button onclick="Samochod.samochod_wyswietl_brulinski()">
+    Pokaż zadanie
+</button>
+
+<button onclick="document.getElementById('kod').style.display='block'">
+    Pokaż kod
+</button>
+
+<div id="wynik">
+    Tutaj pojawi się wynik działania metody obiektu.
+</div>
+
+<div id="kod" style="display:none; margin-top:20px;">
+<h2>Kod źródłowy</h2>
+<pre>
+var Samochod = {
+    kolor: "czerwony",
+    marka: "BMW",
+    rok: 2020,
+
+    samochod_wyswietl_brulinski: function () {
+        document.getElementById("wynik").innerHTML =
+            "Nazwa obiektu: Samochod" +
+            "Pola: kolor, marka, rok" +
+            "Metoda: samochod_wyswietl_brulinski";
+    }
+};
+</pre>
+</div>
+
+</body>
+</html>

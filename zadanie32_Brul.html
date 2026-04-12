@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 32 – programowanie obiektowe JS</title>
+
+    <script type="text/javascript">
+        /* ===============================
+           KONSTRUKTOR (4 POLA)
+        =============================== */
+        function Uczen(nazwisko_u, imie_u, klasa_u, srednia_u) {
+            this.nazwisko = nazwisko_u;
+            this.imie = imie_u;
+            this.klasa = klasa_u;
+            this.srednia = srednia_u;
+        }
+
+        /* ===============================
+           METODA PROTOTYPU
+        =============================== */
+        Uczen.prototype.wypisz = function () {
+            return this.imie + " " + this.nazwisko +
+                   ", klasa: " + this.klasa +
+                   ", średnia: " + this.srednia;
+        };
+
+        /* ===============================
+           POWOŁANIE 3 OBIEKTÓW
+        =============================== */
+        var uczen1 = new Uczen("Kowalski", "Jan", "3A", 4.5);
+        var uczen2 = new Uczen("Nowak", "Anna", "2B", 5.0);
+        var uczen3 = new Uczen("Wiśniewski", "Piotr", "4C", 3.8);
+
+        /* ===============================
+           DODATKOWA WŁAŚCIWOŚĆ
+           (poza ciałem obiektu)
+        =============================== */
+        uczen1.miejscowosc = "Warszawa";
+
+        /* ===============================
+           DODATKOWA METODA
+           (poza konstruktorem)
+        =============================== */
+        Uczen.prototype.uczen_pokaz_kowalski = function () {
+            return "Nazwisko ucznia: " + this.nazwisko;
+        };
+
+
+        function pokazZadanie() {
+            document.getElementById("wynik").innerHTML =
+                "<b>Dane uczniów:</b><br><br>" +
+                uczen1.wypisz() + "<br>" +
+                uczen2.wypisz() + "<br>" +
+                uczen3.wypisz() + "<br><br>" +
+                "<b>Dostęp do właściwości:</b><br>" +
+                uczen1.imie + " " + uczen1.nazwisko + "<br>" +
+                "Miejscowość ucznia 1: " + uczen1.miejscowosc + "<br><br>" +
+                "<b>Użycie dodatkowej metody:</b><br>" +
+                uczen1.uczen_pokaz_kowalski();
+        }
+
+
+        function pokazKod() {
+            document.getElementById("wynik").innerHTML =
+                "<pre>" + document.getElementById("kod").innerText + "</pre>";
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Zadanie 32 – Programowanie obiektowe JavaScript</h2>
+
+    <!-- PRZYCISKI -->
+    <input type="button" value="ZADANIE" onclick="pokazZadanie()">
+    <input type="button" value="KOD" onclick="pokazKod()">
+
+    <hr>
+
+    <!-- WYNIK -->
+    <div id="wynik"></div>
+
+    <!-- KOD DO PODGLĄDU -->
+    <div id="kod"

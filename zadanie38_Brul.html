@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bruliński Z38_JS</title>
+
+<style>
+#demo_brulinski {
+color: red;
+font-size: 40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div style="color:red; font-size:12mm;">
+Bruliński
+</div>
+<br>
+
+<div style="color:green; font-size:12mm;">
+Pojęcie rozdzielczość ekranu/monitora oznacza liczbę pikseli wyświetlanych na ekranie w poziomie i w pionie, np. 1920 × 1080.
+</div>
+<br>
+
+<div style="color:blue; font-size:50px;">
+Pojęcie szerokość/wysokość ekranu przeglądarki w pikselach oznacza aktualny obszar okna przeglądarki dostępny do wyświetlania strony internetowej.
+</div>
+<br>
+
+<p id="demo_brulinski"></p>
+
+<script>
+
+// szerokość i wysokość przeglądarki
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("demo_brulinski");
+
+x.innerHTML =
+"szerokość przeglądarki: " + w +
+", wysokość: " + h + ".";
+
+
+// rozdzielczość monitora
+
+document.write("<br><br>");
+document.write("<font color=silver size=7>");
+document.write("Twoja rozdzielczość ekranu to: ");
+document.write(screen.width);
+document.write(" na ");
+document.write(screen.height);
+document.write("</font>");
+
+</script>
+
+</body>
+</html>
+
+<!-- Bruliński Z38_JS -->

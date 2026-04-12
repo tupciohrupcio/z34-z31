@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 20 Bruliński</title>
+</head>
+<body style="font-family:Arial; font-size:20px;">
+    <h2>Zadanie 20 – Obliczanie długości boków trójkąta</h2>
+
+    <form>
+        A: xA <input type="number" id="xa_kow"> yA <input type="number" id="ya_kow"><br><br>
+        B: xB <input type="number" id="xb_kow"> yB <input type="number" id="yb_kow"><br><br>
+        C: xC <input type="number" id="xc_kow"> yC <input type="number" id="yc_kow"><br><br>
+        <button type="button" onclick="oblicz()">Oblicz boki</button>
+    </form>
+
+    <div id="wynik"></div>
+
+    <script>
+        function AB_kry() {
+            const xa = parseFloat(document.getElementById("xa_kow").value);
+            const ya = parseFloat(document.getElementById("ya_kow").value);
+            const xb = parseFloat(document.getElementById("xb_kow").value);
+            const yb = parseFloat(document.getElementById("yb_kow").value);
+            return Math.sqrt(Math.pow((xb - xa), 2) + Math.pow((yb - ya), 2));
+        }
+
+        function BC_kry() {
+            const xb = parseFloat(document.getElementById("xb_kow").value);
+            const yb = parseFloat(document.getElementById("yb_kow").value);
+            const xc = parseFloat(document.getElementById("xc_kow").value);
+            const yc = parseFloat(document.getElementById("yc_kow").value);
+            return Math.sqrt(Math.pow((xc - xb), 2) + Math.pow((yc - yb), 2));
+        }
+
+        function AC_kry() {
+            const xa = parseFloat(document.getElementById("xa_kow").value);
+            const ya = parseFloat(document.getElementById("ya_kow").value);
+            const xc = parseFloat(document.getElementById("xc_kow").value);
+            const yc = parseFloat(document.getElementById("yc_kow").value);
+            return Math.sqrt(Math.pow((xc - xa), 2) + Math.pow((yc - ya), 2));
+        }
+
+        function oblicz() {
+            const ab = AB_kry().toFixed(2);
+            const bc = BC_kry().toFixed(2);
+            const ac = AC_kry().toFixed(2);
+
+            document.getElementById("wynik").innerHTML =
+                "Długość AB = " + ab + "<br>" +
+                "Długość BC = " + bc + "<br>" +
+                "Długość AC = " + ac;
+        }
+    </script>
+</body>
+</html>

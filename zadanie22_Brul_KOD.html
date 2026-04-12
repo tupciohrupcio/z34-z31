@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bruliński - Zadanie 22 KOD</title>
+    <script>
+        // Funkcja obliczania pola prostokąta
+        function Pole_bru(a_bru, b_bru) {
+            return a_bru * b_bru;
+        }
+
+        // Funkcja obliczania obwodu prostokąta
+        function obwod_bru(a_bru, b_bru) {
+            return 2 * (a_bru + b_bru);
+        }
+
+        // Funkcja do pobrania danych z inputów i wyświetlenia wyników
+        function oblicz_bru() {
+            const a_bru = parseFloat(document.getElementById('a_dana_bru').value);
+            const b_bru = parseFloat(document.getElementById('b_dana_bru').value);
+
+            const pole = Pole_bru(a_bru, b_bru);
+            const obw = obwod_bru(a_bru, b_bru);
+
+            document.getElementById('wyprowadz_pole_bru').value = pole;
+            document.getElementById('wyprowadz_obwod_bru').value = obw;
+        }
+    </script>
+</head>
+<body>
+    <h1>Obliczanie pola i obwodu prostokąta</h1>
+
+    <label for="a_dana_bru">Długość a:</label>
+    <input type="number" id="a_dana_bru"><br><br>
+
+    <label for="b_dana_bru">Długość b:</label>
+    <input type="number" id="b_dana_bru"><br><br>
+
+    <button onclick="oblicz_bru()">Oblicz</button><br><br>
+
+    <label for="wyprowadz_pole_bru">Pole:</label>
+    <input type="text" id="wyprowadz_pole_bru" readonly><br><br>
+
+    <label for="wyprowadz_obwod_bru">Obwód:</label>
+    <input type="text" id="wyprowadz_obwod_bru" readonly>
+</body>
+</html>

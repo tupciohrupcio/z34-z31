@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 31 – Programowanie obiektowe</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+        #wynik {
+            margin-top: 15px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var Samochod = {
+            kolor: "czerwony",
+            marka: "BMW",
+            rok: 2020,
+
+            samochod_wyswietl_brulinski: function () {
+                document.getElementById("wynik").innerHTML =
+                    "<b>Nazwa obiektu:</b> Samochod<br><br>" +
+                    "<b>Pola w ciele obiektu:</b><br>" +
+                    "kolor<br>marka<br>rok<br><br>" +
+                    "<b>Metoda w ciele obiektu:</b><br>" +
+                    "samochod_wyswietl_brulinski";
+            }
+        };
+
+        Samochod.predkosc_maksymalna = 240;
+
+        Samochod.samochod_pokaz_brulinski = function () {
+            document.getElementById("wynik").innerHTML =
+                "<b>Nazwa obiektu:</b> Samochod<br><br>" +
+
+                "<b>Pola w ciele obiektu:</b><br>" +
+                "kolor<br>marka<br>rok<br><br>" +
+
+                "<b>Nowe pole poza ciałem obiektu:</b><br>" +
+                "predkosc_maksymalna = " + this.predkosc_maksymalna + "<br><br>" +
+
+                "<b>Metody:</b><br>" +
+                "samochod_wyswietl_brulinski<br>" +
+                "samochod_pokaz_brulinski";
+        };
+    </script>
+</head>
+
+<body>
+
+<h1>Zadanie 31 – Programowanie obiektowe</h1>
+
+<button onclick="Samochod.samochod_pokaz_brulinski()">
+    Pokaż zadanie
+</button>
+
+<button onclick="document.getElementById('kod').style.display='block'">
+    Pokaż kod
+</button>
+
+<div id="wynik">
+    Tutaj pojawi się wynik działania programu.
+</div>
+
+<div id="kod" style="display:none;">
+    <h2>Kod źródłowy</h2>
+<pre>
+var Samochod = {
+  kolor: "czerwony",
+  marka: "BMW",
+  rok: 2020,
+  samochod_wyswietl_brulinski: function() { ... }
+};
+
+Samochod.predkosc_maksymalna = 240;
+
+Samochod.samochod_pokaz_brulinski = function() { ... };
+</pre>
+</div>
+
+</body>
+</html>

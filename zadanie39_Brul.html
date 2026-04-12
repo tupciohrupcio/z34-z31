@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bruliński Z39_JS</title>
+</head>
+<body>
+
+    <h1 style="color:green;">MENU</h1>
+
+    <h2 style="color:red;">1 - CZERWONY</h2>
+    <h2 style="color:blue;">2 - NIEBIESKI</h2>
+
+    <input type="text" id="kolor_bru">
+    <input type="button" value="Sprawdź" onclick="fun_bru()">
+
+    <div id="wynik_bru"></div>
+
+    <script>
+        function fun_bru()
+        {
+            var opcja_dana_bru = document.getElementById("kolor_bru").value;
+            var tekst_bru = opcja_dana_bru.toLowerCase();
+            var wynik_bru = document.getElementById("wynik_bru");
+
+            if (opcja_dana_bru == 1 || tekst_bru == "czerwony")
+            {
+                wynik_bru.innerHTML = '<font color="red" size="7">wczytałeś kolor czerwony</font>';
+            }
+            else if (opcja_dana_bru == 2 || tekst_bru == "niebieski")
+            {
+                wynik_bru.innerHTML = '<font color="blue" size="1">wczytałeś kolor niebieski</font>';
+            }
+            else
+            {
+                wynik_bru.innerHTML = '<font color="black" size="4">wpisałeś niepoprawną wartość</font>';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+<!-- Bruliński Z39_JS -->

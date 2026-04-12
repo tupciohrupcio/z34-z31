@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Bruliński – Zadanie 17</title>
+    <style>
+        .btn {
+            padding: 10px 16px;
+            background: #2c7be5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 8px 0;
+        }
+        .tabela {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 16px;
+        }
+        .tabela th, .tabela td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        .pytanie { font-weight: bold; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<h2>Bruliński — Zadanie 17</h2>
+
+<!-- 1) Przycisk na stronie zaliczeniowej -->
+<a class="btn" href="zadanie17_brulinski.html" target="_blank">Bruliński – Zadanie17</a>
+
+<hr>
+<h3>Teoria – odpowiedzi</h3>
+
+<p class="pytanie">1. Wymień cztery sposoby wyprowadzania danych w JS</p>
+<p><b><u>Odpowiedź:</u></b><br>
+- dokument.write() <br>
+- alert() <br>
+- wpisywanie danych do pól formularza <br>
+- wpisywanie danych do tabeli HTML
+</p>
+
+<p class="pytanie">2. Czym jest funkcja w JS? (4 podpunkty)</p>
+<p><b><u>Odpowiedź:</u></b><br>
+- Jest zbiorem instrukcji uruchamianych po wywołaniu nazwy funkcji.<br>
+- Po wywołaniu wykonuje zapisany wewnątrz kod.<br>
+- Może posiadać argumenty, które są przetwarzane w środku — np. suma(a,b).<br>
+- Może zwrócić wartość używając słowa kluczowego return.
+</p>
+
+<p class="pytanie">3. Omów metody getElementsByName, getElementById, getElementByTagName</p>
+<table class="tabela">
+    <tr><th>Metoda</th><th>Opis</th></tr>
+    <tr><td>getElementById()</td><td>Dostęp do elementu o określonym atrybucie id.</td></tr>
+    <tr><td>getElementsByTagName()</td><td>Dostęp do wszystkich elementów o tym samym znaczniku, np. p, div.</td></tr>
+    <tr><td>getElementsByName()</td><td>Dostęp do elementów o określonej wartości atrybutu name.</td></tr>
+</table>
+
+<p class="pytanie">4. Omów właściwości: innerHTML, innerText, className</p>
+<p><b><u>innerHTML</u></b> – pozwala pobrać, zmienić lub wstawić kod HTML w elemencie.<br>
+<b><u>innerText</u></b> – ustawia lub pobiera czysty tekst bez HTML.<br>
+<b><u>className</u></b> – ustawia klasę CSS używaną do stylowania elementu.</p>
+
+<hr>
+<h3>Testowanie</h3>
+<div id="test"></div>
+<script>
+    document.getElementById("test").innerHTML = "Test działania innerHTML działa poprawnie.";
+</script>
+<a class="btn" href="zadanie17_Brul_KOD.html" target="_blank">Plik zadanie17_Brul_KOD.html</a>
+
+</body>
+</html>

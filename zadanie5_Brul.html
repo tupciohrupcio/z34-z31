@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 5 - Olek Bruliński</title>
+<script>
+function WinOpen_Brulinski1() {
+   window.open("grafika1.html","graf1","width=400,height=400,top=0,left=0");
+}
+
+function WinOpen_Brulinski2() {
+   window.open("grafika2.html","graf2","width=400,height=400,top=0,left=1000");
+}
+
+function WinOpen_Brulinski3() {
+   window.open("grafika3.html","graf3","width=400,height=400,top=600,left=0");
+}
+
+function WinOpen_Brulinski4() {
+   window.open("grafika4.html","graf4","width=400,height=400,top=600,left=1000");
+}
+
+function okno_zamknij_Brulinski() {
+   window.close();
+}
+</script>
+</head>
+<body>
+<center>
+   <h2 style="color:red;">
+      wykonał: Olek Bruliński, mój numer w dzienniku 1, czyli mam układ (1 mod 4 = 1) → układ 1
+   </h2>
+   <input type="button" value="grafika1" onclick="WinOpen_Brulinski1()">
+   <input type="button" value="grafika2" onclick="WinOpen_Brulinski2()">
+   <input type="button" value="grafika3" onclick="WinOpen_Brulinski3()">
+   <input type="button" value="grafika4" onclick="WinOpen_Brulinski4()">
+   <br><br>
+   <input type="button" value="zamknij okno" onclick="okno_zamknij_Brulinski()">
+</center>
+</body>
+</html>

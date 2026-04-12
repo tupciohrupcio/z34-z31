@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bruliński Z41_JS</title>
+</head>
+<body style="background-color:silver;">
+
+<script>
+var liczba1_bru = 4;
+var liczba2_bru = 11;
+var liczba3_bru = 9;
+var liczba4_bru = 13;
+
+document.write("<div style='color:green; font-size:41px;'>");
+document.write("Moje nazwisko to: Olek Bruliński<br>");
+document.write("liczba1 = " + liczba1_bru + "<br>");
+document.write("liczba2 = " + liczba1_bru + " + 7 = " + liczba2_bru + "<br>");
+document.write("liczba3 = " + liczba3_bru + "<br>");
+document.write("liczba4 = " + liczba3_bru + " + 4 = " + liczba4_bru + "<br>");
+document.write("</div><br>");
+
+document.write("<div style='color:red; font-size:41px;'>");
+document.write("-----------MENU-----------<br>");
+document.write("4 - wyświetlanie teorii o operatorach logicznych<br>");
+document.write("29 - czy liczba należy do przedziału (" + liczba1_bru + " ; " + liczba2_bru + "]<br>");
+document.write("64 - czy liczba należy do przedziału (-∞ ; " + liczba3_bru + ") lub [" + liczba4_bru + " ; +∞)<br>");
+document.write("</div><br>");
+
+var opcja_bru = parseInt(prompt("Podaj numer opcji: ", ""));
+
+if (opcja_bru == 4)
+{
+    document.write("<font color=green size=7>Jesteś w opcji 4 --> teoria</font><br>");
+    document.write("<font color=blue size=6>&& i x=3 y=4 (x < 9 && y > 2) wynik-->prawda</font><br>");
+    document.write("<font color=green size=6>|| lub x=3 y=4 (x==8 || y==6) wynik-->fałsz</font><br>");
+    document.write("<font color=blue size=6>! zaprzeczenie x=3 y=4 !(x==y) wynik-->prawda</font><br>");
+}
+
+if (opcja_bru == 29)
+{
+    document.write("<font color=green size=7>Jesteś w opcji 29 --> przedział</font><br>");
+    var liczba_bru = parseFloat(prompt("Podaj liczbę: ", ""));
+    
+    if ((liczba_bru > liczba1_bru) && (liczba_bru <= liczba2_bru))
+    {
+        document.write("<font color=green size=7>liczba należy do przedziału</font><br>");
+    }
+    else
+    {
+        document.write("<font color=green size=7>liczba nie należy do przedziału</font><br>");
+    }
+}
+
+if (opcja_bru == 64)
+{
+    document.write("<font color=green size=7>Jesteś w opcji 64 --> przedział</font><br>");
+    var liczba2_bru_wczytana = parseFloat(prompt("Podaj liczbę: ", ""));
+    
+    if ((liczba2_bru_wczytana < liczba3_bru) || (liczba2_bru_wczytana >= liczba4_bru))
+    {
+        document.write("<font color=green size=7>liczba należy do przedziału</font><br>");
+    }
+    else
+    {
+        document.write("<font color=green size=7>liczba nie należy do przedziału</font><br>");
+    }
+}
+
+if ((opcja_bru != 4) && (opcja_bru != 29) && (opcja_bru != 64))
+{
+    document.write("<font color=red size=7>nie ma takiej opcji</font><br>");
+}
+</script>
+
+</body>
+</html>
+
+<!-- Bruliński Z41_JS -->

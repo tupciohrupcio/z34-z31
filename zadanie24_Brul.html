@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Bruliński Olek 3K</title>
+<meta charset="utf-8">
+</head>
+<body> 
+<div style="color:red;font-size:30px;"> 
+<script language="JavaScript"> 
+var liczba1 = prompt("liczba1 =", ""); 
+var liczba2 = prompt("liczba2 =", ""); 
+
+var x1_brul = parseFloat(liczba1);
+var x2_brul = parseFloat(liczba2);
+
+document.write("X1=" + x1_brul + "&nbsp;&nbsp;&nbsp;&nbsp;" + "X2=" + x2_brul + "<br>");
+
+// y1
+var y1_brul = 3 * Math.pow(x1_brul, 5/7);
+document.write("y1=" + y1_brul.toFixed(2) + "<br>");
+
+// y2
+var rad_x1_brul = (x1_brul * Math.PI) / 180;
+var y2_brul = 2 * Math.cos(rad_x1_brul) + 3 * Math.sin(rad_x1_brul);
+document.write("y2=" + y2_brul.toFixed(2) + "<br>");
+
+// y3
+var akuku_brul = Math.pow(x1_brul, 5) + 2 * Math.pow(x2_brul, 4);
+var y3_brul = Math.pow(akuku_brul, 1/3) * Math.abs(x1_brul - x2_brul);
+document.write("y3=" + y3_brul.toFixed(2) + "<br>");
+</script> 
+</div> 
+</body> 
+</html>

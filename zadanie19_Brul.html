@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 19 – Bruliński</title>
+</head>
+<body>
+<script>
+function pole_brulinski() {
+    var a_kow = parseFloat(document.getElementById('dlugosc').value);
+    var b_kow = a_kow * a_kow;
+    document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b_kow.toFixed(2) + " cm^2";
+}
+
+function obwod_brulinski() {
+    var a_kow = parseFloat(document.getElementById('dlugosc').value);
+    var b_kow = 4 * a_kow;
+    document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b_kow.toFixed(2) + " cm";
+}
+</script>
+
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value=""> cm<br><br><br>
+<input type="button" value="Oblicz pole" onclick="pole_brulinski()"><br><br>
+<input type="button" value="Oblicz obwód" onclick="obwod_brulinski()"><br><br>
+<div style="color:red;font-size:50px;" id="nazwa"></div>
+
+</body>
+</html>

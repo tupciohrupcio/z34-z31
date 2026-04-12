@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bruliński - Zadanie 23</title>
+    <script>
+        function drabina_bru(D_bru, X_bru) {
+            return Math.sqrt(D_bru*D_bru + X_bru*X_bru);
+        }
+
+        function kat_bru(D_bru, X_bru) {
+            return Math.atan(D_bru / X_bru) * (180 / Math.PI);
+        }
+
+        function oblicz_bru() {
+            const D_bru = parseFloat(document.getElementById('d_dana_bru').value);
+            const X_bru = parseFloat(document.getElementById('x_dana_bru').value);
+
+            const dlugosc = drabina_bru(D_bru, X_bru);
+            const kat = kat_bru(D_bru, X_bru);
+
+            document.getElementById('wyprowadz_dlugosc_bru').value = dlugosc.toFixed(2);
+            document.getElementById('wyprowadz_kat_bru').value = kat.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Zadanie 23 - Drabina</h1>
+
+    <label>D:</label>
+    <input type="number" id="d_dana_bru"><br><br>
+
+    <label>X:</label>
+    <input type="number" id="x_dana_bru"><br><br>
+
+    <button onclick="oblicz_bru()">Oblicz</button><br><br>
+
+    <label>Drabina:</label>
+    <input type="text" id="wyprowadz_dlugosc_bru" readonly><br><br>
+
+    <label>Kąt alfa:</label>
+    <input type="text" id="wyprowadz_kat_bru" readonly>
+</body>
+</html>

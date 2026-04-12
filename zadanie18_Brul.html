@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Brulinski – Zadanie 18</title>
+<style>
+ body { font-family: Arial; font-size: 20px; }
+ .wynik { margin: 6px 0; }
+</style>
+</head>
+<body>
+<h2>Zadanie 18 – Bruliński</h2>
+<script>
+// Pobranie danych
+var a = parseFloat(prompt("a=", ""));
+var b = parseFloat(prompt("b=", ""));
+
+function suma_bru(x, y) {
+    return x + y;
+}
+
+function odejmowanie_bru(x, y) {
+    return x - y;
+}
+
+function mnozenie_bru(x, y) {
+    return x * y;
+}
+
+function od_kwadratu_bru(x, y) {
+    return "" + (x*x) + " i " + (y*y);
+}
+
+function reszta_z_dzielenia_a_przez_b_bru(x, y) {
+    return x % y;
+}
+
+// Wyjścia
+document.write('<div class="wynik">Suma = ' + suma_bru(a,b) + '</div>');
+document.write('<div class="wynik">Odejmowanie = ' + odejmowanie_bru(a,b) + '</div>');
+document.write('<div class="wynik">Mnożenie = ' + mnozenie_bru(a,b) + '</div>');
+document.write('<div class="wynik">Kwadraty = ' + od_kwadratu_bru(a,b) + '</div>');
+document.write('<div class="wynik">Reszta z dzielenia = ' + reszta_z_dzielenia_a_przez_b_bru(a,b) + '</div>');
+</script>
+</body>
+</html>
