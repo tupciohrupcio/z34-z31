@@ -1,42 +1,84 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Bruliński Z35_JS</title>
+<meta charset="UTF-8">
+<title>Bruliński Z34_html</title>
 </head>
 
 <body>
 
-<div style="color:red;font-size:50px;">
+<b>1) Instrukcja wyboru → składnia teoretyczna.</b><br><br>
 
-<script>
-
-var x = prompt("Podaj liczbę x=", "");
-
-var a_dana_bru = parseFloat(x);
-
-document.write("Wczytana liczba x = " + a_dana_bru + "<br>");
-
-if (a_dana_bru > 0)
+<pre>
+if (warunek_logiczny1)
 {
-    document.write("Wczytana liczba jest większa od 0<br>");
+ // instrukcje jeśli warunek_logiczny1 prawdziwy
 }
 
-if (a_dana_bru == 0)
+if (warunek_logiczny2)
 {
-    document.write("Wczytana liczba jest równa 0<br>");
+ // instrukcje jeśli warunek_logiczny2 prawdziwy
 }
+</pre>
 
-if (a_dana_bru < 0)
+<br>
+
+<b>2) Instrukcja wyboru → schemat blokowy.</b><br><br>
+
+<img src="schemat_wyboru.png" alt="Schemat instrukcji wyboru">
+
+<br><br>
+
+<b>3) Instrukcja alternatywy → składnia teoretyczna.</b><br><br>
+
+<pre>
+if (warunek_logiczny)
 {
-    document.write("Wczytana liczba jest mniejsza od 0<br>");
+ // instrukcje jeśli warunek_logiczny prawdziwy
 }
+else
+{
+ // instrukcje jeśli warunek_logiczny fałszywy
+}
+</pre>
 
-</script>
+<br>
 
-</div>
+<b>4) Instrukcja alternatywy → schemat blokowy.</b><br><br>
+
+<img src="schemat_alternatywy.png" alt="Schemat instrukcji alternatywy">
+
+<br><br>
+
+<b>5) Operatory porównania.</b><br><br>
+
+==  jest równe → 2==3 wynik → fałsz<br>
+!=  nie jest równe → 2!=3 wynik → prawda<br>
+&gt;  jest większe → 25&gt;3 wynik → prawda<br>
+&lt;  jest mniejsze → 2&lt;3 wynik → prawda<br>
+&gt;= większe lub równe → 25&gt;=3 wynik → prawda<br>
+&lt;= mniejsze lub równe → 2&lt;=3 wynik → prawda<br>
+
+<br>
+
+<b>6) Uwaga do operatorów porównania.</b><br><br>
+
+Należy odróżnić == (dwa razy) od = (jeden raz).<br><br>
+
+== → instrukcja PORÓWNANIA<br>
+= → instrukcja PRZYPISANIA np. a=5;<br>
+
+<br>
+
+<b>7) Operatory logiczne.</b><br><br>
+
+&& → i → (x &lt; 9 && y &gt; 2) wynik → prawda<br>
+|| → lub → (x==8 || y==6) wynik → fałsz<br>
+! → zaprzeczenie → !(x==y) wynik → prawda<br>
+
+<br><br>
+
+<!-- Bruliński Z34_JS -->
 
 </body>
 </html>
-
-<!-- Bruliński Z35_JS -->

@@ -1,111 +1,37 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <title>Bruliński Z40_JS</title>
-    <style>
-        h1 { text-transform: uppercase; }
-    </style>
 </head>
 <body>
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+var x = prompt("podaj argument x=", "");
+var x_bru = parseFloat(x);
 
-    <h1>Proste działania</h1>
+document.write("wykonał Bruliński<br>");
+document.write("czytany argument x=" + x_bru.toFixed(2) + "<br>");
 
-    <h2>Tutaj wpisz Twoje nazwisko i klasę<br>np. Bruliński klasa [wpisz klasę]</h2>
+function f_bru(x_bru)
+{
+    if (x_bru >= 1)
+    {
+        return 1;
+    }
+    if ((x_bru >= -2) && (x_bru < 1))
+    {
+        return x_bru * x_bru;
+    }
+    if (x_bru < -2)
+    {
+        return 4;
+    }
+}
 
-    <label for="a">Podaj pierwszą liczbę:</label>
-    <input type="number" id="a">
-    <br><br>
-
-    <label for="b">Podaj drugą liczbę:</label>
-    <input type="number" id="b">
-    <br><br>
-
-    <input type="button" value="DODAWANIE" onclick="suma_bru()">
-    <input type="button" value="ODEJMOWANIE" onclick="roznica_bru()">
-    <input type="button" value="MNOŻENIE" onclick="iloczyn_bru()">
-    <input type="button" value="DZIELENIE" onclick="iloraz_bru()">
-    <input type="button" value="TEORIA-Bruliński" onclick="teoria_bru()">
-
-    <div id="wynik" style="margin-top:20px;"></div>
-
-    <script>
-        function pobierz_liczby_bru() {
-            var a_bru = document.getElementById("a").value;
-            var b_bru = document.getElementById("b").value;
-
-            if (a_bru == "" || b_bru == "") {
-                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
-                return null;
-            }
-
-            return {
-                a: parseFloat(a_bru),
-                b: parseFloat(b_bru)
-            };
-        }
-
-        function suma_bru() {
-            var dane_bru = pobierz_liczby_bru();
-            if (dane_bru == null) return;
-
-            var suma_bru = dane_bru.a + dane_bru.b;
-            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma_bru.toFixed(2);
-        }
-
-        function roznica_bru() {
-            var dane_bru = pobierz_liczby_bru();
-            if (dane_bru == null) return;
-
-            var roznica_bru = dane_bru.a - dane_bru.b;
-            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica_bru.toFixed(2);
-        }
-
-        function iloczyn_bru() {
-            var dane_bru = pobierz_liczby_bru();
-            if (dane_bru == null) return;
-
-            var iloczyn_bru = dane_bru.a * dane_bru.b;
-            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn_bru.toFixed(2);
-        }
-
-        function iloraz_bru() {
-            var dane_bru = pobierz_liczby_bru();
-            if (dane_bru == null) return;
-
-            if (dane_bru.b == 0) {
-                document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
-            } else {
-                var iloraz_bru = dane_bru.a / dane_bru.b;
-                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz_bru.toFixed(2);
-            }
-        }
-
-        function teoria_bru() {
-            document.getElementById("wynik").innerHTML =
-            "<font color=green size=4>pierwsza linia teorii</font><br>" +
-            "<font color=red size=4>&lt;label for=&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt; &lt;input type=&quot;number&quot; id=&quot;a&quot;&gt;</font><br>" +
-            "<font color=green size=4>Ta linijka tworzy etykietę i pole numeryczne do wpisania pierwszej liczby.</font><br><br>" +
-
-            "<font color=green size=4>druga linia teorii</font><br>" +
-            "<font color=red size=4>&lt;input type=&quot;button&quot; value=&quot;DODAWANIE&quot; onclick=&quot;suma_bru()&quot;&gt;</font><br>" +
-            "<font color=green size=4>Ta linijka tworzy przycisk DODAWANIE, który po kliknięciu uruchamia funkcję suma_bru().</font><br><br>" +
-
-            "<font color=green size=4>trzecia linia teorii</font><br>" +
-            "<font color=red size=4>var a = document.getElementById(&quot;a&quot;).value;</font><br>" +
-            "<font color=green size=4>Ta linijka pobiera wartość z pola o id = a i zapisuje ją do zmiennej.</font><br><br>" +
-
-            "<font color=green size=4>czwarta linia teorii</font><br>" +
-            "<font color=red size=4>if (a == &quot;&quot; || b == &quot;&quot;)</font><br>" +
-            "<font color=green size=4>Ta linijka sprawdza, czy pole a lub b jest puste.</font><br><br>" +
-
-            "<font color=green size=4>piąta linia teorii</font><br>" +
-            "<font color=red size=4>document.getElementById(&quot;wynik&quot;).innerHTML = &quot;Wynik działania wynosi: &quot; + suma;</font><br>" +
-            "<font color=green size=4>Ta linijka wyświetla w elemencie wynik tekst i obliczony rezultat działania.</font><br>";
-        }
-    </script>
-
+document.write("f(" + x_bru.toFixed(2) + ")=" + f_bru(x_bru).toFixed(2) + "<br>");
+</script>
+</div>
 </body>
 </html>
-
 <!-- Bruliński Z40_JS -->

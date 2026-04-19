@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl">
 <head>
 <meta charset="UTF-8">
 <title>Bruliński Z36_JS</title>
@@ -9,23 +9,22 @@
 
 <script>
 
-var x = prompt("Podaj liczbę =", "");
+var liczba;
 
-var liczba_bru = parseInt(x);
+liczba = prompt("Podaj liczbę:");
 
-if (liczba_bru % 2 == 0)
+if (liczba % 2 == 0)
 {
-document.write("<font color=red size=3>liczba jest parzysta</font><br>");
+document.write("<font color=red size=3>liczba jest parzysta</font>");
 }
-
-if (liczba_bru % 2 != 0)
+else
 {
-document.write("<font color=silver size=5>liczba jest nieparzysta</font><br>");
+document.write("<font color=silver size=5>liczba jest nieparzysta</font>");
 }
 
 </script>
 
+<!-- Bruliński Z36_JS -->
+
 </body>
 </html>
-
-<!-- Bruliński Z36_JS -->
